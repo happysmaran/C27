@@ -7,7 +7,7 @@ var box1, pig1;
 var backgroundImg,platform;
 
 function preload() {
-    backgroundImg = loadImage("sprites/bg.png");
+    backgroundImg = loadImage("bg.png");
 }
 
 function setup(){
@@ -36,6 +36,10 @@ function setup(){
 
     bird = new Bird(100,100);
 
+    smaranLog=new Log(100,100,100,PI/7);
+
+    chain=new CHAIN(bird.body,smaranLog.body);
+
 }
 
 function draw(){
@@ -61,4 +65,7 @@ function draw(){
 
     bird.display();
     platform.display();
+
+    smaranLog.display();
+    chain.display();
 }
